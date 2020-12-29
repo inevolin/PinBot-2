@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF8E89BF-A168-4330-8AE8-1581A7E275AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PinBot2.Presenter</RootNamespace>
+    <AssemblyName>PinBot2.Presenter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountPresenter.cs" />
+    <Compile Include="AddEditAccountPresenter.cs" />
+    <Compile Include="Configurations\ConfigPresenter.cs" />
+    <Compile Include="Configurations\CommentConfigPresenter.cs" />
+    <Compile Include="Configurations\Interface\ISpecialFeaturesView.cs" />
+    <Compile Include="Configurations\RepinQueueConfigPresenter.cs" />
+    <Compile Include="Configurations\Interface\IConfigureQueueScrapeView.cs" />
+    <Compile Include="Configurations\Interface\IConfigureQueueView.cs" />
+    <Compile Include="Configurations\PinQueueConfigPresenter.cs" />
+    <Compile Include="Configurations\PinConfigPresenter.cs" />
+    <Compile Include="Configurations\InviteConfigPresenter.cs" />
+    <Compile Include="Configurations\RepinConfigPresenter.cs" />
+    <Compile Include="Configurations\UnfollowConfigPresenter.cs" />
+    <Compile Include="Configurations\FollowConfigPresenter.cs" />
+    <Compile Include="Configurations\Interface\IConfigureView.cs" />
+    <Compile Include="Configurations\LikeConfigPresenter.cs" />
+    <Compile Include="Configurations\Interface\ISelectView.cs" />
+    <Compile Include="Helpers\SpecialFeaturesEventArgs.cs" />
+    <Compile Include="Interface\ITrialView.cs" />
+    <Compile Include="TrialPresenter.cs" />
+    <Compile Include="Helpers\CustomEventArgs.cs" />
+    <Compile Include="Interface\ILicensingView.cs" />
+    <Compile Include="LicensingPresenter.cs" />
+    <Compile Include="Helpers\ScrapingEventArgs.cs" />
+    <Compile Include="Interface\IAccountView.cs" />
+    <Compile Include="Interface\IAddEditAccountView.cs" />
+    <Compile Include="Interface\ISplashView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashPresenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PinBot2.Algorithms\PinBot2.Algorithms.csproj">
+      <Project>{8ddc9b48-a81f-4083-8e2e-bb4d2f85cb8a}</Project>
+      <Name>PinBot2.Algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Common\PinBot2.Common.csproj">
+      <Project>{52cfd78d-d239-456f-9dbf-2da1aad948cc}</Project>
+      <Name>PinBot2.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Dal\PinBot2.Dal.csproj">
+      <Project>{24A90BB9-0D0C-4DA3-A071-CB02EF1FE83C}</Project>
+      <Name>PinBot2.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Model\PinBot2.Model.csproj">
+      <Project>{A1F2B280-ECF3-4D2A-95AA-E30974B05FBB}</Project>
+      <Name>PinBot2.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

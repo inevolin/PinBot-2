@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DF5819F-697C-4E96-92D4-29B982CF20B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PinBot2</RootNamespace>
+    <AssemblyName>PinBot2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\UGent\Desktop\PinBot2\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/PinBot2/</UpdateUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.3</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PinBot2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3BBA4D7FA0106656686D737AF16185266E4A7F6B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PinBot2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditAccountForm.Designer.cs">
+      <DependentUpon>AddEditAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\CommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\CommentForm.Designer.cs">
+      <DependentUpon>CommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\BoardSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\BoardSelector.Designer.cs">
+      <DependentUpon>BoardSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\PinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\PinForm.Designer.cs">
+      <DependentUpon>PinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\InviteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\InviteForm.Designer.cs">
+      <DependentUpon>InviteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\QueueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\QueueForm.Designer.cs">
+      <DependentUpon>QueueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\RepinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\PinRepin\RepinForm.Designer.cs">
+      <DependentUpon>RepinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\UnfollowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\UnfollowForm.Designer.cs">
+      <DependentUpon>UnfollowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\FollowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\FollowForm.Designer.cs">
+      <DependentUpon>FollowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\LikeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\LikeForm.Designer.cs">
+      <DependentUpon>LikeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurations\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurations\SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\UserProperties.cs" />
+    <Compile Include="SpecialFeatures\ScrapeUsersExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialFeatures\ScrapeUsersExportForm.Designer.cs">
+      <DependentUpon>ScrapeUsersExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrialForm.Designer.cs">
+      <DependentUpon>TrialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\InputBoxClass.cs" />
+    <Compile Include="Helpers\Licensing.cs" />
+    <Compile Include="Helpers\StatusLabel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LicensingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicensingForm.Designer.cs">
+      <DependentUpon>LicensingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AccountInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AccountInformation.Designer.cs">
+      <DependentUpon>AccountInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\QueueItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\QueueItem.Designer.cs">
+      <DependentUpon>QueueItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditAccountForm.resx">
+      <DependentUpon>AddEditAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\CommentForm.resx">
+      <DependentUpon>CommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\PinRepin\BoardSelector.resx">
+      <DependentUpon>BoardSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\PinRepin\PinForm.resx">
+      <DependentUpon>PinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\InviteForm.resx">
+      <DependentUpon>InviteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\PinRepin\QueueForm.resx">
+      <DependentUpon>QueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\PinRepin\RepinForm.resx">
+      <DependentUpon>RepinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\UnfollowForm.resx">
+      <DependentUpon>UnfollowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\FollowForm.resx">
+      <DependentUpon>FollowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\LikeForm.resx">
+      <DependentUpon>LikeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialFeatures\ScrapeUsersExportForm.resx">
+      <DependentUpon>ScrapeUsersExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrialForm.resx">
+      <DependentUpon>TrialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="LicensingForm.resx">
+      <DependentUpon>LicensingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AccountInformation.resx">
+      <DependentUpon>AccountInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\QueueItem.resx">
+      <DependentUpon>QueueItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PinBot2.Algorithms\PinBot2.Algorithms.csproj">
+      <Project>{8ddc9b48-a81f-4083-8e2e-bb4d2f85cb8a}</Project>
+      <Name>PinBot2.Algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Common\PinBot2.Common.csproj">
+      <Project>{52cfd78d-d239-456f-9dbf-2da1aad948cc}</Project>
+      <Name>PinBot2.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Dal\PinBot2.Dal.csproj">
+      <Project>{24a90bb9-0d0c-4da3-a071-cb02ef1fe83c}</Project>
+      <Name>PinBot2.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Model\PinBot2.Model.csproj">
+      <Project>{a1f2b280-ecf3-4d2a-95aa-e30974b05fbb}</Project>
+      <Name>PinBot2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Presenter\PinBot2.Presenter.csproj">
+      <Project>{df8e89bf-a168-4330-8ae8-1581a7e275ad}</Project>
+      <Name>PinBot2.Presenter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\PinBot2.Algorithms.dll" />
+    <None Include="bin\Debug\PinBot2.Common.dll" />
+    <None Include="bin\Debug\PinBot2.Dal.dll" />
+    <None Include="bin\Debug\PinBot2.Model.dll" />
+    <None Include="bin\Debug\PinBot2.Presenter.dll" />
+    <None Include="bin\Debug\System.Data.SQLite.dll" />
+    <None Include="bin\Debug\x86\SQLite.Interop.dll" />
+    <Content Include="logo.ico" />
+    <Content Include="Resources\back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\PinBot2.Algorithms.dll" />
+    <Content Include="Resources\pinterest-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

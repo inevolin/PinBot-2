@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DDC9B48-A81F-4083-8E2E-BB4D2F85CB8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PinBot2.Algorithms</RootNamespace>
+    <AssemblyName>PinBot2.Algorithms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\Algo.cs" />
+    <Compile Include="Algorithms\CommentAlgo.cs" />
+    <Compile Include="Algorithms\SpecialFeatures\ScrapeUsersExportAlgo.cs" />
+    <Compile Include="Helpers\QueueHelper.cs" />
+    <Compile Include="Scraping\Queue\RepinQueueAlgo.cs" />
+    <Compile Include="Scraping\Queue\DuplicateChecker.cs" />
+    <Compile Include="Scraping\Queue\PinQueueAlgo.cs" />
+    <Compile Include="Algorithms\InviteAlgo.cs" />
+    <Compile Include="Algorithms\PinAlgo.cs" />
+    <Compile Include="Algorithms\RepinAlgo.cs" />
+    <Compile Include="Algorithms\UnfollowAlgo.cs" />
+    <Compile Include="MapperDataSource.cs" />
+    <Compile Include="Scraping\Abstraction\ScrapeSessionManager.cs" />
+    <Compile Include="Scraping\Scraping\ScrapeExternal_tumblr.cs" />
+    <Compile Include="Scraping\Scraping\IndividualUser.cs" />
+    <Compile Include="Scraping\Scraping\IndividualPin.cs" />
+    <Compile Include="Scraping\Scraping\ScrapeExternal_imgfave.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePinComments.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePins.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePinners.cs" />
+    <Compile Include="Scraping\Scraping\ScrapeBoards.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePins_UserPinsResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePins_BoardFeedResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapeBoards_ProfileBoardsResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePinners_BoardFollowersResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapeBoards_BoardFollowingResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePinners_UserFollowingResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePinners_UserFollowersResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapeBoards_SearchResource.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePinners_SearchResource.cs" />
+    <Compile Include="Scraping\Abstraction\ScrapeSession.cs" />
+    <Compile Include="Algorithms\FollowAlgo.cs" />
+    <Compile Include="Algorithms\LikeAlgo.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scraping\Scraping\ScrapePins_SearchResource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PinBot2.Common\PinBot2.Common.csproj">
+      <Project>{52cfd78d-d239-456f-9dbf-2da1aad948cc}</Project>
+      <Name>PinBot2.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Dal\PinBot2.Dal.csproj">
+      <Project>{24a90bb9-0d0c-4da3-a071-cb02ef1fe83c}</Project>
+      <Name>PinBot2.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinBot2.Model\PinBot2.Model.csproj">
+      <Project>{a1f2b280-ecf3-4d2a-95aa-e30974b05fbb}</Project>
+      <Name>PinBot2.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

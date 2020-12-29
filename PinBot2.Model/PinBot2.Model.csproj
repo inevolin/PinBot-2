@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1F2B280-ECF3-4D2A-95AA-E30974B05FBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PinBot2.Model</RootNamespace>
+    <AssemblyName>PinBot2.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="Configurations\Campaign.cs" />
+    <Compile Include="Configurations\Configuration.cs" />
+    <Compile Include="Configurations\ConfigurationContainer.cs" />
+    <Compile Include="Configurations\CommentConfiguration.cs" />
+    <Compile Include="Configurations\SpecialFeatures\ScrapeUsersExportConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\IPinRepinConfiguration.cs" />
+    <Compile Include="Configurations\PinConfiguration.cs" />
+    <Compile Include="Configurations\InviteConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\IInviteConfiguration.cs" />
+    <Compile Include="Configurations\RepinConfiguration.cs" />
+    <Compile Include="Configurations\UnfollowConfiguration.cs" />
+    <Compile Include="Configurations\FollowConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\IConfiguration.cs" />
+    <Compile Include="Configurations\LikeConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\ICommentConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\IUnfollowConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\IFollowConfiguration.cs" />
+    <Compile Include="Configurations\Interfaces\ICampaign.cs" />
+    <Compile Include="Configurations\Interfaces\IConfigurationContainer.cs" />
+    <Compile Include="Configurations\Interfaces\ILikeConfiguration.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
+    <Compile Include="PinterestObjects\Comment.cs" />
+    <Compile Include="PinterestObjects\ExternalPin.cs" />
+    <Compile Include="PinterestObjects\PinterestObject.cs" />
+    <Compile Include="PinterestObjects\Pinner.cs" />
+    <Compile Include="PinterestObjects\Board.cs" />
+    <Compile Include="PinterestObjects\Pin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PinBot2.Common\PinBot2.Common.csproj">
+      <Project>{52cfd78d-d239-456f-9dbf-2da1aad948cc}</Project>
+      <Name>PinBot2.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
